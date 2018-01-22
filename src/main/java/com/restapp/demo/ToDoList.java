@@ -21,7 +21,7 @@ public class ToDoList {
     }
 
     public void changeItemStatus(int index, boolean status ){
-        toDoItemList.set(index, new ToDoItem(toDoItemList.get(index).getId(), toDoItemList.get(index).getText(), status));
+        toDoItemList.set(index, new ToDoItem(toDoItemList.get(index).getText(), status));
     }
 
     public void removeItem(int index){

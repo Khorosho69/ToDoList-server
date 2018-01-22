@@ -9,13 +9,11 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 public class ToDoController {
-    //This is SERVER
-    private final AtomicLong counter = new AtomicLong();
     private ToDoList toDoList = new ToDoList();
 
     @RequestMapping(value = "/toDoItems", method = RequestMethod.POST)
     public ResponseOK addNewToDoItem(@RequestParam(value="itemText", defaultValue="Work on this shit") String itemText){
-        toDoList.addItemToList(new ToDoItem(counter.incrementAndGet(), counter.get() + ": " + itemText, false));
+        toDoList.addItemToList(new ToDoItem(itemText, false));
         return new ResponseOK();
     }
 
