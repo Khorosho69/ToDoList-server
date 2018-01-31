@@ -20,12 +20,12 @@ public class ToDoList {
         return  toDoItemList.get(index);
     }
 
-    public void changeItemStatus(int index, boolean status ){
-        toDoItemList.set(index, new ToDoItem(toDoItemList.get(index).getText(), status));
-    }
-
     public void removeItem(int index){
         toDoItemList.remove(index);
+    }
+
+    public void updateToDoItem(int id, ToDoItem newItem){
+        toDoItemList.set(id, newItem);
     }
 
     public List<ToDoItem> getToDoItemList() {

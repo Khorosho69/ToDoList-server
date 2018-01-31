@@ -1,8 +1,11 @@
 package com.restapp.demo;
 
 public class ToDoItem {
-    private final String text;
-    private final boolean isComplete;
+    private String text;
+    private boolean isComplete;
+
+    public ToDoItem() {
+    }
 
     public ToDoItem(String text, boolean isComplete) {
         this.text = text;
@@ -15,5 +18,13 @@ public class ToDoItem {
 
     public boolean isComplete() {
         return isComplete;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setComplete(boolean complete) {
+        isComplete = complete;
     }
 }
